@@ -1,0 +1,12 @@
+class Solution {
+    public ListNode reverseList(ListNode head) {
+       List<Integer>al=new ArrayList<>();
+        for(ListNode cur=head;cur!=null;cur=cur.next){
+            al.add(cur.val);
+        }
+        for(ListNode cur=head;cur!=null;cur=cur.next){
+            cur.val=al.remove(al.size()-1);
+        }
+        return head;
+    }
+}
