@@ -1,0 +1,13 @@
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        if(head==null) return false;
+        List<Integer>al=new ArrayList<>();
+        for(ListNode cur=head;cur!=null;cur=cur.next){
+            al.add(cur.val);
+        }
+        for(ListNode cur=head;cur!=null;cur=cur.next){
+            if(cur.val!=al.remove(al.size()-1)) return false;
+        }
+        return true;
+    }
+}
