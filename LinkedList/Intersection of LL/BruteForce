@@ -1,0 +1,12 @@
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+     HashSet<ListNode>hs=new HashSet<>();
+     for(ListNode cur=headA;cur!=null;cur=cur.next){
+         hs.add(cur);
+     }
+      for(ListNode cur=headB;cur!=null;cur=cur.next){
+        if(hs.contains(cur)) return cur;
+     }  
+        return null;
+    }
+}
